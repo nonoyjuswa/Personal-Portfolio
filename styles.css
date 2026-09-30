@@ -697,30 +697,114 @@ h2 {
   .cs-link { margin-top: 0.4rem; }
 }
 
-/* Skills Layout */
-.skills-container {
+/* ==========================================================================
+   WHAT I DO (replaces the old "Skills Layout" rules)
+   Delete: .skills-container, .skills-container div / h3 / ul
+   ========================================================================== */
+#skills {
+  --wd-bg-deep: #1c0d10;
+  --wd-bg-mid: #2c1216;
+  --wd-accent: #e8735f;
+  --wd-text-light: #f3e9e6;
+  --wd-text-muted: #cbb7b3;
+  --wd-line: rgba(243, 233, 230, 0.14);
+
+  background:
+    radial-gradient(120% 160% at 10% 10%, var(--wd-bg-mid) 0%, var(--wd-bg-deep) 60%);
+  padding: 2.4rem 5%;
+  color: var(--wd-text-light);
+}
+
+.wd-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 170px 1fr;
+  gap: 2.4rem;
+  align-items: center;
 }
 
-.skills-container div {
-  background-color: #ffffff;
-  border: 1px solid var(--border-light);
-  padding: 1.2rem;
-}
-
-.skills-container h3 {
-  font-size: 1rem;
+/* ---------- Intro ---------- */
+#skills h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 0.8rem;
-  color: var(--primary-burgundy);
+  color: var(--wd-text-light);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
 }
 
-.skills-container ul {
-  list-style: square inside;
-  font-size: 0.9rem;
-  color: var(--text-dark);
+.wd-rule {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--wd-accent);
+}
+
+/* ---------- Cards ---------- */
+.wd-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.9rem;
+}
+
+.wd-card {
+  padding: 1.2rem 1.1rem 1.4rem;
+  border: 1px solid var(--wd-line);
+  border-radius: 8px;
+  background: rgba(243, 233, 230, 0.03);
+  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+
+.wd-card:hover {
+  border-color: rgba(232, 115, 95, 0.6);
+  background: rgba(232, 115, 95, 0.06);
+  transform: translateY(-3px);
+}
+
+.wd-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 1.2rem;
+}
+
+.wd-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--wd-accent);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wd-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wd-text-light);
+  margin-bottom: 0.6rem;
+}
+
+.wd-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.74rem;
+  line-height: 1.6;
+  color: var(--wd-text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .wd-layout { grid-template-columns: 1fr; gap: 1.6rem; }
+  .wd-grid { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
 }
 
 /* ==========================================================================
