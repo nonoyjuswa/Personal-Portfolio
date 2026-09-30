@@ -10,27 +10,61 @@
         <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="navbar">
-            <div class="logo">JT</div>
-            <nav>
-                <ul>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#contact" class="btn-nav">Let's Talk</a>
-        </header>
-
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Hi, I'm <span>Joshua Tamayo</span></h1>
-                <p>A passionate JOB TITLE building functional and beautiful WHAT YOU DO experiences.</p>
-                <a href="#projects" class="btn">Explore My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-        </section>
+        <div class="hero-shell">
+            <header class="navbar">
+                <div class="logo">JT</div>
+                <nav>
+                    <ul>
+                        <li><a href="#projects">Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="btn-nav">Let's Talk</a>
+            </header>
+        
+            <section id="hero">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">ASPIRING PRODUCT MANAGER <span class="eyebrow-line"></span></p>
+        
+                    <h1>
+                        <span class="h1-line">Build
+                            <svg class="hero-spark" viewBox="0 0 40 40" aria-hidden="true">
+                                <path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/>
+                            </svg>
+                        </span>
+                        <span class="h1-line"><em>with</em> Intent</span>
+                    </h1>
+        
+                    <p class="hero-sub">I'm Joshua Tamayo. I build digital experiences that are functional, thoughtful, and made with the user in mind.</p>
+        
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-pill">View My Work <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#contact" class="btn-link">Download CV <span aria-hidden="true">&darr;</span></a>
+                    </div>
+                </div>
+        
+                <div class="hero-art">
+                    <div class="arch-outline"></div>
+                    <div class="arch">
+                        <img src="images/dsad.png" alt="Joshua Tamayo">
+                    </div>
+        
+                    <svg class="art-spark" viewBox="0 0 40 40" aria-hidden="true">
+                        <path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/>
+                    </svg>
+        
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 120 120" class="badge-ring" aria-hidden="true">
+                            <defs><path id="badgeCircle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+                            <text><textPath href="#badgeCircle">USER-CENTERED &#8226; IMPACT-DRIVEN &#8226;</textPath></text>
+                        </svg>
+                        <span class="badge-mark">JT</span>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <section id="projects">
             <h2>Featured Projects</h2>
