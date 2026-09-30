@@ -235,25 +235,63 @@
             </div>
         </section>
 
-        <section id="about">
-            <div class="about-card">
-                <div class="about-portrait">
-                    <img src="images/dsad.png" alt="Joshua Tamayo">
+        <section id="about"> 
+            <!-- decorative wireframe globe (top right) -->
+            <svg class="ab-globe" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="90"/>
+                <ellipse cx="100" cy="100" rx="90" ry="34"/>
+                <ellipse cx="100" cy="100" rx="90" ry="62"/>
+                <ellipse cx="100" cy="100" rx="34" ry="90"/>
+                <ellipse cx="100" cy="100" rx="62" ry="90"/>
+                <path d="M100 10v180M10 100h180"/>
+            </svg>
+        
+            <div class="ab-layout">
+        
+                <!-- LEFT: About me -->
+                <div class="ab-col ab-col-about">
+                    <h2 class="ab-label">About Me</h2>
+        
+                    <div class="ab-about-row">
+                        <div class="ab-portrait">
+                            <img src="images/dsad.png" alt="Joshua Tamayo">
+                        </div>
+        
+                        <div class="ab-text">
+                            <p>I'm a Computer Science student with a growing interest in product management, software development, and building useful solutions to real-world problems.</p>
+                            <p>I enjoy turning ideas into structured plans and finding better ways to solve problems, not just technically, but from the user's perspective.</p>
+        
+                            <ul class="ab-traits">
+                                <li>Curious &amp; always learning</li>
+                                <li>Problem solver</li>
+                                <li>Product-minded</li>
+                                <li>Collaborative leader</li>
+                                <li>Driven by continuous improvement</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="about-content">
-                    <h1>About Me</h1>
-                    <p>I'm a Computer Science student with a growing interest in product management, software development, and building useful solutions to real-world problems.</p>
-                    <p>I enjoy turning ideas into structured plans, understanding how systems work, and finding better ways to solve problems&mdash;not just technically, but from the user's perspective.</p>
-
-                    <ul class="about-traits">
-                        <li>Curious &amp; always learning</li>
-                        <li>Problem solver</li>
-                        <li>Product-minded</li>
-                        <li>Collaborative leader</li>
-                        <li>Driven by continuous improvement</li>
+        
+                <!-- RIGHT: Tools + quote -->
+                <div class="ab-col ab-col-tools">
+                    <h2 class="ab-label">Tools I Use</h2>
+        
+                    <ul class="ab-tools">
+                        <li><span class="ab-tile">VS</span><span class="ab-tool-name">VS Code</span></li>
+                        <li><span class="ab-tile">Gh</span><span class="ab-tool-name">GitHub</span></li>
+                        <li><span class="ab-tile">Py</span><span class="ab-tool-name">Python</span></li>
+                        <li><span class="ab-tile">JS</span><span class="ab-tool-name">JavaScript</span></li>
+                        <li><span class="ab-tile">Fg</span><span class="ab-tool-name">Figma</span></li>
                     </ul>
+        
+                    <!-- Swap this for a real testimonial or a personal quote -->
+                    <blockquote class="ab-quote">
+                        <span class="ab-quote-mark" aria-hidden="true">&ldquo;</span>
+                        <p>Joshua turns ideas into clear plans and follows through. He always thinks about the user first.</p>
+                        <cite>&mdash; Teammate Feedback</cite>
+                    </blockquote>
                 </div>
+        
             </div>
         </section>
         
