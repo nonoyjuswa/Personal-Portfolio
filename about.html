@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #1c0d10;
+    --bg-mid: #2c1216;
+    --accent: #e8735f;
+    --accent-dim: #7a3730;
+    --text-light: #f3e9e6;
+    --text-muted: #cbb7b3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(120% 140% at 15% 20%, var(--bg-mid) 0%, var(--bg-deep) 60%);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 860px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .portrait {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+    overflow: hidden;
+    background:
+      linear-gradient(200deg, rgba(232,115,95,0.15), transparent 60%),
+      linear-gradient(160deg, #3a1a1c, #150a0b);
+  }
+
+  .portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg-deep) 0%, transparent 45%);
+    pointer-events: none;
+  }
+
+  .portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .content h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    letter-spacing: 0.02em;
+    color: var(--text-light);
+    margin-bottom: 1.4rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 46ch;
+    margin-bottom: 1rem;
+  }
+
+  .traits {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .traits li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.98rem;
+    color: var(--text-light);
+  }
+
+  .traits li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .portrait {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    .content p { margin-left: auto; margin-right: auto; }
+    .traits li { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="portrait">
+      <img src="images/dsad.png" alt="Joshua Tamayo">
+    </div>
+
+    <div class="content">
+      <h1>About Me</h1>
+      <p>I'm a Computer Science student with a growing interest in product management, software development, and building useful solutions to real-world problems.</p>
+      <p>I enjoy turning ideas into structured plans, understanding how systems work, and finding better ways to solve problems—not just technically, but from the user's perspective.</p>
+
+      <ul class="traits">
+        <li>Curious & always learning</li>
+        <li>Problem solver</li>
+        <li>Product-minded</li>
+        <li>Collaborative leader</li>
+        <li>Driven by continuous improvement</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
