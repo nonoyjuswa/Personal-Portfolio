@@ -16,6 +16,11 @@
   --light-muted: #cbb7b3;
   --line: rgba(243, 233, 230, 0.14);
   --qr-bg: #f3e9e2;
+  --blush: #f0d3c8;
+  --blush-deep: #e2b3a4;
+  --rose: #d99a8a;
+  --rose-deep: #b8705f;
+  --wine-card: linear-gradient(160deg, #6b2a2c, #3a1a1c);
 
   --font-body: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'Rubik', 'Helvetica Neue', Arial, sans-serif;
