@@ -19,5 +19,8 @@
 
   --font-body: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'Rubik', 'Helvetica Neue', Arial, sans-serif;
+  --font-hero: 'Bodoni Moda', Georgia, serif;
+  --font-ui: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-italic: 'Playfair Display', Georgia, serif;
   --font-accent: 'Cormorant Garamond', Georgia, serif;
 }

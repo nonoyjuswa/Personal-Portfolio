@@ -6,33 +6,60 @@
   <title>Joshua Tamayo - JOB TITLE Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Poppins:wght@300;400;500;600&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:ital@1&family=Montserrat:wght@300;500&family=Playfair+Display:ital@1&family=Poppins:wght@300;400;500;600&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar__logo">JT</div>
-    <nav class="navbar__nav" aria-label="Main">
-      <ul class="navbar__list">
-        <li><a class="navbar__link" href="#projects">Work</a></li>
-        <li><a class="navbar__link" href="#about">About</a></li>
-        <li><a class="navbar__link" href="#skills">Services</a></li>
-        <li><a class="navbar__link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="navbar__cta" href="#contact">Let's Talk</a>
-  </header>
+  <div class="hero-shell">
+    <header class="navbar">
+      <div class="navbar__logo">JT</div>
+      <nav class="navbar__nav" aria-label="Main">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="#projects">Work</a></li>
+          <li><a class="navbar__link" href="#about">About</a></li>
+          <li><a class="navbar__link" href="#skills">Services</a></li>
+          <li><a class="navbar__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="navbar__cta" href="#contact">Let's Talk</a>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">JOB TITLE &amp; WHAT YOU DO <span class="hero__eyebrow-line"></span></p>
+        <h1 class="hero__title">
+          <span class="hero__line">Build
+            <svg class="hero__spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/></svg>
+          </span>
+          <span class="hero__line"><em>with</em> Intent</span>
+        </h1>
+        <p class="hero__sub">I'm Joshua Tamayo. I build digital experiences that are functional, thoughtful, and made with the user in mind.</p>
+        <div class="hero__actions">
+          <a href="#projects" class="hero__pill">View My Work <span aria-hidden="true">&rarr;</span></a>
+          <a href="#contact" class="hero__link">Contact Me <span aria-hidden="true">&darr;</span></a>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <div class="hero__arch-outline"></div>
+        <div class="hero__arch"><img src="images/dsad.png" alt="Joshua Tamayo"></div>
+        <svg class="hero__art-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/></svg>
+        <div class="hero__badge">
+          <svg viewBox="0 0 120 120" class="hero__badge-ring" aria-hidden="true">
+            <defs><path id="badgeCircle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+            <text><textPath href="#badgeCircle">USER-CENTERED &#8226; IMPACT-DRIVEN &#8226;</textPath></text>
+          </svg>
+          <span class="hero__badge-mark">JT</span>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <main>
-    <section class="hero" id="hero">
-      <h1 class="hero__title">Hi, I'm <span class="hero__name">Joshua Tamayo</span></h1>
-      <p class="hero__lead">A passionate JOB TITLE building functional and beautiful WHAT YOU DO experiences.</p>
-      <a href="#projects" class="btn">Explore My Work</a>
-      <a href="#contact" class="btn btn--secondary">Contact Me</a>
-    </section>
 
     <section class="section" id="projects" aria-labelledby="projects-title">
       <h2 class="section__title" id="projects-title">Featured Projects</h2>
