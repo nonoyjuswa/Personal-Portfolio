@@ -1,0 +1,23 @@
+/* Design tokens: change the palette or fonts here only */
+:root {
+  --burgundy: #501620;
+  --cream: #fbf9f6;
+  --ink: #1f1f1f;
+  --muted: #666666;
+  --border: #e2dbd7;
+  --white: #ffffff;
+  --chip: #f0eae6;
+
+  --dark-deep: #1c0d10;
+  --dark-mid: #2c1216;
+  --dark-panel: linear-gradient(160deg, #241012, #180b0c);
+  --coral: #e8735f;
+  --light: #f3e9e6;
+  --light-muted: #cbb7b3;
+  --line: rgba(243, 233, 230, 0.14);
+  --qr-bg: #f3e9e2;
+
+  --font-body: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Rubik', 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+}

@@ -1,0 +1,87 @@
+/* Reusable pieces: navbar, buttons, cards */
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  margin-bottom: 20px;
+  background-color: var(--cream);
+  border-radius: 4px;
+}
+.navbar__logo { font-size: 1.5rem; letter-spacing: 2px; color: var(--burgundy); }
+.navbar__nav { margin-left: auto; margin-right: 2.5rem; }
+.navbar__list { display: flex; list-style: none; gap: 2rem; }
+.navbar__link {
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+.navbar__link:hover { color: var(--burgundy); }
+.navbar__cta {
+  border: 1px solid var(--burgundy);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin: 0.25rem;
+  background-color: var(--burgundy);
+  color: var(--white);
+  border: 1px solid var(--burgundy);
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+.btn:hover { opacity: 0.85; }
+.btn--secondary { background-color: transparent; color: var(--burgundy); }
+
+/* Project card */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--white); }
+.project-card__title { font-size: 1.1rem; color: var(--burgundy); margin-bottom: 0.5rem; }
+.project-card__summary { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+.project-card__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin-bottom: 1rem; }
+.project-card__tag {
+  background: var(--chip);
+  color: var(--burgundy);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+.project-card__link {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  text-decoration: none;
+}
+
+/* Skill group */
+.skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.skill-group { background: var(--white); border: 1px solid var(--border); padding: 1.2rem; }
+.skill-group__title { font-size: 1rem; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--burgundy); }
+.skill-group__list { list-style: square inside; font-size: 0.9rem; }
