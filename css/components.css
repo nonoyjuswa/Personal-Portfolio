@@ -1,4 +1,4 @@
-/* Reusable pieces: navbar, buttons, cards */
+/* Reusable pieces: navbar, buttons */
 
 /* Buttons */
 .btn {
@@ -18,9 +18,3 @@
 }
 .btn:hover { opacity: 0.85; }
 .btn--secondary { background-color: transparent; color: var(--burgundy); }
-
-/* Skill group */
-.skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-.skill-group { background: var(--white); border: 1px solid var(--border); padding: 1.2rem; }
-.skill-group__title { font-size: 1rem; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--burgundy); }
-.skill-group__list { list-style: square inside; font-size: 0.9rem; }
