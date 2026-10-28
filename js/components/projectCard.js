@@ -1,13 +1,17 @@
 // View: turns one project object into HTML.
-export function projectCard({ title, summary, tags, demo, source }) {
+export function projectCard({ title, tags, href, image, label = title }) {
   return `
-    <article class="project-card">
-      <h3 class="project-card__title">${title}</h3>
-      <p class="project-card__summary">${summary}</p>
-      <ul class="project-card__tags">
-        ${tags.map(t => `<li class="project-card__tag">${t}</li>`).join("")}
-      </ul>
-      <a class="project-card__link" href="${demo}" target="_blank" rel="noopener">Live Demo</a>
-      <a class="project-card__link" href="${source}" target="_blank" rel="noopener">Source Code</a>
+    <article class="work-card">
+      <a href="${href}" target="_blank" rel="noopener" class="work-card__thumb" aria-label="Open ${title}">
+        <span class="work-card__ph" aria-hidden="true">${label}</span>
+        ${image ? `<img src="${image}" alt="${title} preview">` : ""}
+      </a>
+      <div class="work-card__meta">
+        <div>
+          <h3 class="work-card__title">${title}</h3>
+          <p class="work-card__tags">${tags.join(" &middot; ")}</p>
+        </div>
+        <a href="${href}" target="_blank" rel="noopener" class="work-card__plus" aria-label="View ${title}">+</a>
+      </div>
     </article>`;
 }

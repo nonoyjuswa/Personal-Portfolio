@@ -19,34 +19,6 @@
 .btn:hover { opacity: 0.85; }
 .btn--secondary { background-color: transparent; color: var(--burgundy); }
 
-/* Project card */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.project-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--white); }
-.project-card__title { font-size: 1.1rem; color: var(--burgundy); margin-bottom: 0.5rem; }
-.project-card__summary { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
-.project-card__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin-bottom: 1rem; }
-.project-card__tag {
-  background: var(--chip);
-  color: var(--burgundy);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 2px;
-}
-.project-card__link {
-  display: inline-block;
-  margin-right: 1rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--burgundy);
-  text-decoration: none;
-}
-
 /* Skill group */
 .skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 .skill-group { background: var(--white); border: 1px solid var(--border); padding: 1.2rem; }
