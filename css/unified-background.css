@@ -1,0 +1,58 @@
+/* One shared background for the whole page.
+   Load this LAST in index.html (after sections.css).
+   Sections no longer have their own backgrounds; they are separated
+   by thin inset divider lines instead. */
+
+body {
+  padding: 0;
+  color: var(--light);
+  background-color: var(--dark-deep);
+  background-image:
+    radial-gradient(60% 50% at 82% 0%, rgba(232, 115, 95, 0.12) 0%, transparent 70%),
+    radial-gradient(90% 60% at 8% 100%, var(--dark-mid) 0%, transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Remove the individual containers/backgrounds */
+.hero-shell,
+.section,
+.section--dark,
+.featured-work,
+.what-i-do,
+#about,
+.contact__panel {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-shell,
+.section { margin-bottom: 0; }
+
+/* Divider line between sections (inset to match the content padding) */
+main > .section { position: relative; }
+main > .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+
+/* A bit more breathing room now that there are no boxes */
+main > .section,
+main > #about {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Footer sits on the same background */
+.site-footer {
+  color: var(--light-muted);
+  padding: 1.6rem 0 2rem;
+  border-top: 1px solid var(--line);
+  margin: 0 5%;
+}

@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Tamayo - JOB TITLE Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:ital@1&family=Montserrat:wght@300;500&family=Playfair+Display:ital@1&family=Poppins:wght@300;400;500;600&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/featured-work.css">
-  <link rel="stylesheet" href="css/what-i-do.css">
-  <link rel="stylesheet" href="css/case-studies.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/sections.css">
-</head>
-<body>
-  <div class="hero-shell">
-    <header class="navbar">
-      <div class="navbar__logo">JT</div>
-      <nav class="navbar__nav" aria-label="Main">
-        <ul class="navbar__list">
-          <li><a class="navbar__link" href="#projects">Work</a></li>
-          <li><a class="navbar__link" href="#about">About</a></li>
-          <li><a class="navbar__link" href="#skills">Services</a></li>
-          <li><a class="navbar__link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a class="navbar__cta" href="#contact">Let's Talk</a>
-    </header>
-
+<?php
+$pageTitle = "Joshua Tamayo - Portfolio";
+include "partials/head.php";
+?>
+  <?php include "partials/navbar.php"; ?>
+  <div class="hero-shell">  
     <section class="hero" id="hero">
       <div class="hero__content">
         <p class="hero__eyebrow">JOB TITLE &amp; WHAT YOU DO <span class="hero__eyebrow-line"></span></p>
@@ -220,10 +192,4 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Joshua Tamayo. All rights reserved.</p>
-  </footer>
-
-  <script type="module" src="js/main.js"></script>
-</body>
-</html>
+  <?php include "partials/footer.php"; ?>
