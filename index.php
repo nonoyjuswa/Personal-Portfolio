@@ -188,6 +188,33 @@ include "partials/head.php";
             <path d="M5 35 Q15 10 25 30 T45 20 Q55 8 60 30 T85 15 Q95 5 100 28 T130 18" stroke="var(--light-muted)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
+
+        <div class="contact__form-wrap" id="contact-form">
+          <?php $status = $_GET["status"] ?? ""; ?>
+          <h2 class="contact__title">Send a Message</h2>
+
+          <?php if ($status === "sent"): ?>
+            <p class="form-alert form-alert--ok" role="status">Thanks! Your message was sent.</p>
+          <?php elseif ($status === "invalid"): ?>
+            <p class="form-alert form-alert--error" role="alert">Please fill in every field with a valid email address.</p>
+          <?php elseif ($status === "error"): ?>
+            <p class="form-alert form-alert--error" role="alert">Something went wrong on our side. Please try again later.</p>
+          <?php endif; ?>
+
+          <form class="contact__form" action="php/send-message.php" method="POST">
+            <div class="contact__form-row">
+              <input class="contact__field" type="text" name="name" placeholder="Your name" maxlength="100" required>
+              <input class="contact__field" type="email" name="email" placeholder="Your email" maxlength="150" required>
+            </div>
+            <textarea class="contact__field" name="message" placeholder="Your message" maxlength="2000" required></textarea>
+
+            <!-- Honeypot: hidden from people, bots tend to fill it in -->
+            <input class="contact__hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="contact__submit" type="submit">Send Message <span aria-hidden="true">&rarr;</span></button>
+          </form>
+        </div>
+
       </div>
     </section>
   </main>
