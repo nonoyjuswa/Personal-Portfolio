@@ -20,6 +20,7 @@ $pageTitle = $pageTitle ?? "Admin";
     <div class="admin-bar__brand">JT <span>Admin</span></div>
     <nav class="admin-bar__nav" aria-label="Admin">
       <a href="index.php">Messages</a>
+      <a href="projects.php">Projects</a>
       <a href="../index.php" target="_blank" rel="noopener">View site</a>
     </nav>
     <form action="logout.php" method="POST" class="admin-bar__logout">
