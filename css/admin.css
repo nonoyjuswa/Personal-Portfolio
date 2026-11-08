@@ -1,0 +1,80 @@
+/* Admin area */
+.admin-bar {
+  display: flex; align-items: center; gap: 2rem;
+  padding: 1rem 1.6rem; margin-bottom: 20px;
+  border-radius: 4px;
+  background: radial-gradient(120% 140% at 15% 20%, var(--dark-mid) 0%, var(--dark-deep) 60%);
+  color: var(--light);
+  font-family: var(--font-ui);
+}
+.admin-bar__brand { font-family: var(--font-hero); font-size: 1.4rem; letter-spacing: 2px; }
+.admin-bar__brand span { font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--coral); margin-left: 0.4rem; }
+.admin-bar__nav { display: flex; gap: 1.6rem; margin-right: auto; }
+.admin-bar__nav a { color: var(--light); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.2s ease; }
+.admin-bar__nav a:hover { color: var(--coral); }
+.admin-bar__logout button {
+  background: none; border: 1px solid var(--coral); color: var(--light);
+  padding: 0.5rem 1.1rem; border-radius: 999px; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.admin-bar__logout button:hover { background: var(--coral); color: var(--dark-deep); }
+
+.admin {
+  padding: 2rem; border-radius: 4px;
+  background: radial-gradient(120% 150% at 12% 15%, var(--dark-mid) 0%, var(--dark-deep) 60%);
+  color: var(--light);
+  font-family: var(--font-ui);
+  min-height: 60vh;
+}
+.admin h1 { font-family: var(--font-hero); font-weight: 400; font-size: 1.7rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.admin__sub { color: var(--light-muted); font-size: 0.82rem; margin-bottom: 1.6rem; }
+.admin a { color: var(--coral); }
+
+/* Login / setup card */
+.auth-card { max-width: 380px; margin: 4vh auto; padding: 2rem; border: 1px solid var(--line); border-radius: 10px; background: var(--dark-panel); }
+.auth-card form { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 1.2rem; }
+.auth-card label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light-muted); }
+.field {
+  width: 100%; padding: 0.75rem 1rem; margin-top: 0.35rem;
+  font-family: var(--font-ui); font-size: 0.85rem; color: var(--light);
+  background: rgba(243, 233, 230, 0.04); border: 1px solid var(--line); border-radius: 8px;
+}
+.field:focus { outline: none; border-color: var(--coral); }
+.btn-primary {
+  align-self: flex-start; padding: 0.8rem 1.8rem; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--light); background: transparent; border: 1px solid var(--coral); border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn-primary:hover { background: var(--coral); color: var(--dark-deep); }
+
+.alert { padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.82rem; margin-top: 1rem; }
+.alert--ok { background: rgba(120, 190, 140, 0.14); border: 1px solid rgba(120, 190, 140, 0.5); color: #cfeadb; }
+.alert--error { background: rgba(232, 115, 95, 0.14); border: 1px solid rgba(232, 115, 95, 0.6); color: #ffd9d1; }
+
+/* Message list */
+.msg-list { display: flex; flex-direction: column; gap: 0.9rem; }
+.msg { padding: 1.1rem 1.3rem; border: 1px solid var(--line); border-radius: 8px; background: rgba(243, 233, 230, 0.03); }
+.msg--unread { border-color: rgba(232, 115, 95, 0.6); background: rgba(232, 115, 95, 0.07); }
+.msg__head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.msg__who { font-weight: 600; font-size: 0.9rem; }
+.msg__who small { font-weight: 300; color: var(--light-muted); margin-left: 0.4rem; }
+.msg__date { font-size: 0.72rem; color: var(--light-muted); }
+.msg__body { font-size: 0.85rem; line-height: 1.7; color: var(--light-muted); white-space: normal; word-break: break-word; }
+.msg__actions { display: flex; gap: 0.6rem; margin-top: 0.9rem; }
+.msg__actions form { display: inline; }
+.btn-sm {
+  padding: 0.4rem 0.9rem; cursor: pointer; border-radius: 999px;
+  font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--light); background: transparent; border: 1px solid var(--line);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.btn-sm:hover { border-color: var(--coral); color: var(--coral); }
+.btn-sm--danger:hover { border-color: #ff7b6b; color: #ff7b6b; }
+.empty { color: var(--light-muted); font-size: 0.9rem; }
+
+@media (max-width: 640px) {
+  .admin-bar { flex-wrap: wrap; gap: 0.8rem; }
+  .admin { padding: 1.2rem; }
+}
