@@ -1,0 +1,9 @@
+# Don't list folder contents
+Options -Indexes
+
+# Basic hardening headers (needs mod_headers, which XAMPP enables by default)
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

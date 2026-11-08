@@ -22,7 +22,7 @@
 .what-i-do__rule { display: block; width: 36px; height: 2px; background: var(--coral); }
 
 /* Cards */
-.what-i-do__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.9rem; }
+.what-i-do__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.9rem; }
 
 .service-card {
   padding: 1.2rem 1.1rem 1.4rem;

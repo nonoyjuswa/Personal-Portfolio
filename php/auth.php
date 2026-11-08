@@ -6,6 +6,7 @@ function start_session(): void {
     session_set_cookie_params([
       "lifetime" => 0,        // ends when the browser closes
       "path"     => "/",
+      "secure"   => !empty($_SERVER["HTTPS"]),
       "httponly" => true,     // JavaScript can't read the cookie
       "samesite" => "Lax",
     ]);

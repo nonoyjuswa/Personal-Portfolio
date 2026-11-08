@@ -1,5 +1,5 @@
 /* Navbar */
-#navbar {position: sticky; top: 0; left: 0; width: 100%; z-index: 100; background: var(--dark);}
+#navbar {position: sticky; top: 0; left: 0; width: 100%; z-index: 100; background: var(--dark-deep);}
 .navbar {display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 5%; }
 .navbar__logo { font-family: var(--font-hero); font-size: 1.7rem; letter-spacing: 2px; color: var(--light); }
 .navbar__nav { margin-left: auto; margin-right: 2.5rem; }

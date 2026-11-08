@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Manila"); 
 // Database connection. Include with: require __DIR__ . "/db.php";
 // Then use: db()->prepare("...")
 
@@ -20,6 +21,7 @@ function db(): PDO {
         PDO::ATTR_EMULATE_PREPARES   => false,
       ]
     );
+    $pdo->exec("SET time_zone = '+08:00'");
   }
   return $pdo;
 }
