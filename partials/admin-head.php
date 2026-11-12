@@ -23,6 +23,7 @@ $pageTitle = $pageTitle ?? "Admin";
       <a href="projects.php">Projects</a>
       <a href="case-studies.php">Case studies</a>
       <a href="services.php">Services</a>
+      <a href="contact.php">Contact</a>
       <a href="cv.php">CV</a>
       <a href="../index.php" target="_blank" rel="noopener">View site</a>
     </nav>

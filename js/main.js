@@ -2,6 +2,7 @@
 import { projectCard } from "./components/projectCard.js";
 import { serviceCard } from "./components/serviceCard.js";
 import { caseStudyCard } from "./components/caseStudyCard.js";
+import "./utils/copy.js";
 
 const render = (selector, items, view) => {
   const el = document.querySelector(selector);

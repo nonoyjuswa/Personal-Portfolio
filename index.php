@@ -1,5 +1,7 @@
 <?php
 $pageTitle = "Joshua Tamayo - Portfolio";
+require "php/settings.php";
+$contactRows = contact_rows(get_settings());
 include "partials/head.php";
 ?>
   <?php include "partials/navbar.php"; ?>
@@ -157,60 +159,45 @@ include "partials/head.php";
 
     <section class="section section--dark contact" id="contact" aria-labelledby="contact-title">
       <div class="contact__panel">
-        <div class="contact__col">
-          <h2 class="contact__title" id="contact-title">Let's Collaborate</h2>
-          <p class="contact__intro">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
-          <ul class="contact__info">
-            <li class="contact__info-item">
-              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg></span>
-              <!-- TODO: replace with your real email -->
-              you@example.com
-            </li>
-            <li class="contact__info-item">
-              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg></span>
-              <!-- TODO: replace with your real phone number -->
-              +63 000 000 0000
-            </li>
-            <li class="contact__info-item">
-              <span class="contact__icon"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-              Iloilo City, Philippines
-            </li>
-            <li class="contact__info-item">
-              <span class="contact__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18 13 13 0 0 1 0-18z"/></svg></span>
-              github.com/nonoyjuswa
-            </li>
-          </ul>
-        </div>
 
         <div class="contact__col">
-          <h2 class="contact__title">Scan to Connect</h2>
-          <div class="contact__qr-row">
-            <div class="contact__qr-item">
-              <div class="contact__qr-frame">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;bgcolor=f3e9e2&amp;color=1c0d10&amp;data=https://www.linkedin.com/in/joshua-tamayo-iloilo/" alt="LinkedIn QR code">
-                <div class="contact__qr-badge">in</div>
-              </div>
-              <div class="contact__qr-label">LinkedIn</div>
-            </div>
-            <div class="contact__qr-item">
-              <div class="contact__qr-frame">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;bgcolor=f3e9e2&amp;color=1c0d10&amp;data=https://github.com/nonoyjuswa" alt="GitHub QR code">
-                <div class="contact__qr-badge">Gh</div>
-              </div>
-              <div class="contact__qr-label">GitHub</div>
-            </div>
+          <h2 class="contact__headline" id="contact-title"><em>Let's create</em> something extraordinary.</h2>
+          <a href="#contact-form" class="hero__pill">Let's work together <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="contact__art" aria-hidden="true">
+          <div class="contact__arch">
+            <img src="images/contact-arch.png" alt="" onerror="this.remove()">
           </div>
+          <svg class="contact__art-spark" viewBox="0 0 40 40"><path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/></svg>
         </div>
 
-        <div class="contact__col contact__col--tagline">
-          <svg class="contact__spark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z" fill="var(--coral)" opacity="0.9"/>
-          </svg>
-          <p class="contact__tagline">Designing<br>experiences.<br>Building<br>connections.</p>
-          <svg class="contact__signature" viewBox="0 0 140 50" fill="none" aria-hidden="true">
-            <path d="M5 35 Q15 10 25 30 T45 20 Q55 8 60 30 T85 15 Q95 5 100 28 T130 18" stroke="var(--light-muted)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-          </svg>
+        <ul class="contact__info">
+          <?php foreach ($contactRows as $r): if ($r["value"] === "") continue; ?>
+            <li class="contact__info-item">
+              <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><?= $r["icon"] ?></svg></span>
+              <div class="contact__info-text">
+                <span class="contact__info-head">
+                  <span class="contact__info-label"><?= e($r["label"]) ?></span>
+                  <?php if ($r["copy"]): ?>
+                    <button type="button" class="contact__copy" data-copy="<?= e($r["value"]) ?>">Copy</button>
+                  <?php endif; ?>
+                </span>
+                <?php if ($r["href"] !== ""): ?>
+                  <a class="contact__info-value" href="<?= e($r["href"]) ?>"<?= $r["external"] ? ' target="_blank" rel="noopener"' : "" ?>><?= e($r["value"]) ?></a>
+                <?php else: ?>
+                  <span class="contact__info-value"><?= e($r["value"]) ?></span>
+                <?php endif; ?>
+              </div>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+
+        <div class="contact__brand">
+          <span class="contact__monogram">JT</span>
+          <p class="contact__tagline">Designing digital experiences that leave a lasting impact.</p>
         </div>
+
       </div>
     </section>
 

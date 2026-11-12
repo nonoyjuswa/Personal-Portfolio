@@ -22,6 +22,7 @@ $pageTitle = $pageTitle ?? "Joshua Tamayo - Portfolio";
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/info-strip.css">
   <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/unified-background.css">
 </head>
 <body>
