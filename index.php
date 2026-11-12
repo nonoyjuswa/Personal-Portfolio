@@ -16,7 +16,7 @@ include "partials/head.php";
         <p class="hero__sub">I'm Joshua Tamayo. I build digital experiences that are functional, thoughtful, and made with the user in mind.</p>
         <div class="hero__actions">
           <a href="#projects" class="hero__pill">View My Work <span aria-hidden="true">&rarr;</span></a>
-          <a href="#contact" class="hero__link">Contact Me <span aria-hidden="true">&darr;</span></a>
+          <a href="php/download-cv.php" class="hero__link">Download CV <span aria-hidden="true">&darr;</span></a>
         </div>
       </div>
 
