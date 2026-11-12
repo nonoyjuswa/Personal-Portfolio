@@ -37,6 +37,29 @@ include "partials/head.php";
 
   <main>
 
+    <section class="section info-strip" aria-label="At a glance">
+      <div class="info-strip__inner">
+        <div class="info-strip__item">
+          <span class="info-strip__label">Based in</span>
+          <p class="info-strip__value">Iloilo City, Philippines</p>
+        </div>
+
+        <div class="info-strip__item">
+          <span class="info-strip__label">Available for</span>
+          <p class="info-strip__value">Internships &amp; Freelance</p>
+        </div>
+
+        <div class="info-strip__item info-strip__item--sign">
+          <span class="info-strip__signature">Joshua Tamayo</span>
+          <svg class="info-strip__spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z"/></svg>
+        </div>
+
+        <div class="info-strip__item">
+          <p class="info-strip__tagline">Turning ideas<br>into meaningful<br>digital experiences.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--dark featured-work" id="projects" aria-labelledby="featured-work-title">
       <div class="featured-work__head">
         <h2 class="featured-work__title" id="featured-work-title">
@@ -50,6 +73,16 @@ include "partials/head.php";
       </div>
     </section>
 
+    <section class="section section--dark what-i-do" id="skills" aria-labelledby="what-i-do-title">
+      <div class="what-i-do__layout">
+        <div class="what-i-do__intro">
+          <h2 class="what-i-do__title" id="what-i-do-title">What I Do</h2>
+          <span class="what-i-do__rule"></span>
+        </div>
+        <div class="what-i-do__grid" id="service-grid"></div>
+      </div>
+    </section>
+
     <section class="section section--dark case-studies" id="case-studies" aria-labelledby="case-studies-title">
       <div class="case-studies__head">
         <h2 class="case-studies__title" id="case-studies-title">
@@ -59,16 +92,6 @@ include "partials/head.php";
         <a href="#projects" class="case-studies__all">See all case studies <span class="arrow-btn" aria-hidden="true">&rarr;</span></a>
       </div>
       <div class="case-studies__grid" id="case-study-grid"></div>
-    </section>
-
-    <section class="section section--dark what-i-do" id="skills" aria-labelledby="what-i-do-title">
-      <div class="what-i-do__layout">
-        <div class="what-i-do__intro">
-          <h2 class="what-i-do__title" id="what-i-do-title">What I Do</h2>
-          <span class="what-i-do__rule"></span>
-        </div>
-        <div class="what-i-do__grid" id="service-grid"></div>
-      </div>
     </section>
 
     <section class="section" id="about">

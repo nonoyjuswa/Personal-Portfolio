@@ -1,0 +1,74 @@
+/* Info strip: Based in / Available for / signature / tagline */
+/* Extra .section class bumps specificity over unified-background's
+   "main > .section" padding, so the strip stays slim. */
+main > .section.info-strip {
+  padding: clamp(1.4rem, 3vw, 2rem) 5%;
+}
+
+.info-strip__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr 1fr;
+  align-items: center;
+}
+
+.info-strip__item {
+  padding: 0.4rem clamp(1rem, 2.2vw, 2rem);
+}
+.info-strip__item:first-child { padding-left: 0; }
+.info-strip__item + .info-strip__item { border-left: 1px solid var(--line); }
+
+.info-strip__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: clamp(0.58rem, 0.5rem + 0.2vw, 0.65rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 0.7rem;
+}
+
+.info-strip__value {
+  font-family: var(--font-hero);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 0.8rem + 1vw, 1.3rem);
+  line-height: 1.25;
+  color: var(--light);
+}
+
+/* Signature */
+.info-strip__item--sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.info-strip__signature {
+  font-family: var(--font-script);
+  font-size: clamp(1.9rem, 1rem + 1.6vw, 2.8rem);
+  line-height: 1;
+  color: var(--light);
+  white-space: nowrap;
+}
+.info-strip__spark { width: 10px; height: 10px; fill: var(--coral); align-self: flex-end; }
+
+/* Tagline */
+.info-strip__tagline {
+  font-family: var(--font-hero);
+  font-size: clamp(0.9rem, 0.7rem + 0.8vw, 1.05rem);
+  line-height: 1.45;
+  color: var(--light);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .info-strip__inner { grid-template-columns: 1fr 1fr; row-gap: 1.2rem; }
+  .info-strip__item:nth-child(3) { border-left: none; padding-left: 0; }
+  .info-strip__item--sign { justify-content: flex-start; }
+}
+@media (max-width: 520px) {
+  .info-strip__inner { grid-template-columns: 1fr; }
+  .info-strip__item,
+  .info-strip__item:first-child { padding: 1rem 0; border-left: none; }
+  .info-strip__item + .info-strip__item { border-top: 1px solid var(--line); }
+}
